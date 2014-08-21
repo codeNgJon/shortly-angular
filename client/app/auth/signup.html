@@ -1,10 +1,10 @@
 <div id='container'>
-  <h1>signup</h1>
+  <h1>Sign Up</h1>
   <form name="signupForm" ng-submit='signup()'>
-    <input type='text' name="username" ng-model='user.username'>
-    <input style="display: inline" type="password" name="password" ng-model='user.password' ng-minlength="6">
-    <span ng-show="signupForm.password.$error.minlength">Minimum of six characters bro!</span><br/>
-    <button type="submit" ng-disabled="signupForm.password.$error.minlength">signup</button>
+    <input type='text' name="username" placeholder="username" ng-model='user.username'>
+    <input type="password" name="password" placeholder="password" ng-model='user.password' ng-minlength="6"><br/>
+<!--     <span ng-show="signupForm.password.$error.minlength">Minimum of six characters, bro!</span><br/> -->
+    <button type="submit" ng-disabled="signupForm.password.$error.minlength">Sign Up</button>
   </form>
-  <a href="#/signin">Already have an account? Signin ...</a>
+  <a href="#/signin">Already have an account? Sign in.</a>
 </div>

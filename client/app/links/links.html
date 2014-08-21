@@ -1,10 +1,10 @@
-<div id='link'>
-  <h1>links</h1>
-  <input placeholder="Search the links!" ng-model="filterLink"/>
-  <ul ng-repeat="link in data.links | orderBy:'-visits' | filter:filterLink">
-    <li>Visits: {{ link.visits }}</li>
-    <li>Title: {{ link.title }}</li>
-    <li>Url: {{ link.url }} </li>
+<div id='links'>
+  <h1>Links</h1>
+  <input class="searchLinks" type="text" placeholder="Search the links!" ng-model="filterLink"/>
+  <ul class="links" ng-repeat="link in data.links | orderBy:'-visits' | filter:filterLink">
+    <li class="title">{{ link.title }}</li>
+    <li class="originalUrl">{{ link.url }} </li>
     <li><a href="{{ link.base_url }}/api/links/{{ link.code }}">{{ link.base_url }}/api/links/{{ link.code }}</a></li>
+    <li><span>Visits</span> {{ link.visits }}</li>
   </ul>
 </div>

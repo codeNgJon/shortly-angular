@@ -13,13 +13,13 @@ angular.module('shortly.shorten', [])
     Links.addLink($scope.link)
       .success(function() {
         $scope.validateUrl = 'shortened the link bro!';
+        $scope.loading = false;
       })
       .catch(function(error){
         $scope.validateUrl = 'ERROR BROSEF!';
+        $scope.loading = false;
         console.error(error);
       });
-
-    $scope.loading = false;
   };
 
 });

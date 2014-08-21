@@ -1,11 +1,11 @@
 <div id='container'>
   <h1>Shorten</h1>
   <form name="shortenForm" ng-submit='addLink()'>
-    <input style="display: inline" type='text' name="url" ng-model='link.url' ng-pattern="validUrl"/>
+    <input type='text' class="shortenUrl" name="url" placeholder="website here" ng-model='link.url' ng-pattern="validUrl"/><br/>
 
-    <span style="display: inline" ng-show="shortenForm.url.$error.pattern">Not a valid URL bro!</span></br>
+    <!-- <span style="display: inline" ng-show="shortenForm.url.$error.pattern">Not a valid URL bro!</span></br> -->
 
-    <button ng-disabled="shortenForm.url.$error.pattern">shorten url</button>
+    <button ng-disabled="shortenForm.url.$error.pattern">Shorten me!</button>
   </form>
   <h1>{{ validateUrl }}</h1>
 </div>
