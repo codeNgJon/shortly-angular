@@ -1,4 +1,4 @@
-<div id='link' ng-init="getLinks()">
+<div id='link'>
   <h1>links</h1>
   <input placeholder="Search the links!" ng-model="filterLink"/>
   <ul ng-repeat="link in data.links | orderBy:'-visits' | filter:filterLink">
