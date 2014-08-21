@@ -5,6 +5,7 @@ angular.module('shortly.auth', [])
 
 .controller('AuthController', function ($scope, $window, $location, Auth) {
   $scope.user = {};
+  $scope.showError = 'no error so far homie';
 
   $scope.signin = function () {
     Auth.signin($scope.user)
@@ -13,6 +14,7 @@ angular.module('shortly.auth', [])
         $location.path('/links');
       })
       .catch(function (error) {
+        $scope.showError = 'ERROR IN SIGN-IN HOMEZ'
         console.error(error);
       });
   };

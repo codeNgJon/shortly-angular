@@ -1,8 +1,10 @@
-<div id='link'>
+<div id='link' ng-init="getLinks()">
   <h1>links</h1>
-  <div ng-init="getLinks()"></div>
-  <div> </div> <!-- visits -->
-  <div> </div> <!-- title -->
-  <div> </div> <!-- url -->
-  <a> </a> <!--base_url/ code -->
+  <input placeholder="Search the links!" ng-model="filterLink"/>
+  <ul ng-repeat="link in data.links | orderBy:'-visits' | filter:filterLink">
+    <li>Visits: {{ link.visits }}</li>
+    <li>Title: {{ link.title }}</li>
+    <li>Url: {{ link.url }} </li>
+    <li><a href="{{ link.base_url }}/api/links/{{ link.code }}">{{ link.base_url }}/{{ link.code }}</a></li>
+  </ul>
 </div>
