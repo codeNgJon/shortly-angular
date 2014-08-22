@@ -33,6 +33,10 @@ h1 {
   letter-spacing: -0.08em;
 }
 
+.mainTitle span {
+  color: #DA2C23;
+}
+
 ul.links {
   padding: 20px 0px;
   background-color: none;
